@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main (){
+	
+	int nilaiUas,nilaiUts,nilaiTugas;
+	char nama[100];
+	char studi[100];
+	int nilai_rata2;
+	
+	printf("Nama \t\t= ");
+	scanf("%s", & nama);
+	printf("P. studi\t= ");
+	scanf("%s", & studi);
+	printf("\nMasukan Nilai Tugas \t=");
+	scanf("%d",&nilaiTugas);
+	printf("Masukan Nilai UTS   \t=");
+	scanf("%d",&nilaiUts); 
+	printf("Masukan Nilai UAS   \t=");
+	scanf("%d",&nilaiUas);
+	
+	nilai_rata2=(0.3 * nilaiTugas)+(0.3*nilaiUts)+(0.4 * nilaiUas);
+	printf("Rata - Rata Nilai\t= %d", nilai_rata2);
+	printf("\nNilai ");
+	if(nilai_rata2>80){
+		printf("A");
+	}
+	else if(nilai_rata2>70){
+		printf("B");
+	}
+	else if(nilai_rata2>55){
+		printf("C");
+	}
+	else if(nilai_rata2>35){
+		printf("D");
+	}
+	else{
+		printf("E");
+	}
+	printf("\n\tCreated By :%s ",nama);
+	getch();
+	return 0;
+	}
